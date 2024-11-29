@@ -1,19 +1,12 @@
 
 export default function WeatherDashboard() {
     return (
-      <>
-      <Head>
-          <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-          />
-      </Head>
-          <div class="h-[100vh] w-[100%] bg-slate-800 flex justify-center items-center">
-              <div class="h-[85vh] w-[70%] bg-slate-900 rounded rounded-[2vh] flex ">
+          <div class="h-[100vh] w-[100%] bg-slate-700 flex justify-center items-center">
+              <div class="h-[85vh] w-[70%] bg-slate-800 rounded rounded-[2vh] flex ">
                   <div class="h-[100%] w-[10%] rounded rounded-[2vh] flex justify-center items-center">
                       <div class="h-[97%] w-[85%] bg-slate-800 rounded rounded-[2vh]">
                           <div class="h-[13%] w-[100%] rounded rounded-[2vh] flex justify-center items-center">
-                          <div class="h-[70%] w-[70%] bg-slate-800 rounded rounded-[2vh] flex justify-center items-center text-3xl text-[#8193a1]">
+                          <div class="h-[70%] w-[70%] bg-slate-900 rounded rounded-[2vh] flex justify-center items-center text-3xl text-[#8193a1]">
                                   <i class="fa-solid fa-wind"></i>
                           </div>
                           </div>
@@ -62,20 +55,20 @@ export default function WeatherDashboard() {
                   <div class="h-[100%] w-[60%] rounded rounded-[2vh] flex flex-col">
                       <div class="h-[10%] w-[100%] flex justify-center items-center">
                           <input type="text" id="first_name" class="bg-[#484d57]
-                              text-[#484d57] text-sm rounded-lg block w-[95%] p-2.5" placeholder="Search for cities"
+                              text-[#484d57] text-sm rounded-lg w-[95%] p-2.5" placeholder="Search for cities"
                               required />
                       </div>
                       <div class="h-[25vh] w-[100%] flex">
                           <div class="h-[100%] w-[50%] ">
                               <div class="h-[50%] w-[100%] ">
                                   <h1 class="text-bold text-white text-3xl pl-4 pt-5">Madrid</h1>
-                                  <h3 class="text-bold text-slate-600 pl-6 ">Chance of rain 0%</h3>
+                                  <h3 class="text-bold text-slate-200 pl-6 ">Chance of rain 0%</h3>
                               </div>
                               <div class="h-[50%] w-[100%]">
                                   <h1 class="text-[6vh] text-bold text-white pl-6">31º</h1>
                               </div>
                           </div>
-                          <div class="h-[100%] w-[50%] text-[21vh] text-yellow-500 flex justify-center item-center">
+                          <div class="h-[100%] w-[50%] text-[21vh] text-yellow-300 flex justify-center item-center">
                               <i class="fa-solid fa-sun"></i>
                           </div>
                       </div>
@@ -358,6 +351,5 @@ export default function WeatherDashboard() {
         </div>
     </div>
 </div>
-</>
  );
  }

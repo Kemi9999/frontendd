@@ -30,3 +30,6 @@ export default function Home()  {
     </div>
   );
 };
+//<div>{data.map((item) => {
+//  return <div>{item.description}</div>
+//})}</div>
