@@ -1,35 +1,25 @@
-export default function Home()  {
-  const[color, setColor] = useState("");
-  return (
-    <div className={`flex space-x-4 w-full h-screen bg-${color}-800`}>
-      <p>Ungu solih:</p>
-      <button
-      className="border bg-red-800 py-4 px-6"   
-      onClick={()=>{
-        setColor("red");
-      }}>
-        Ulaan
+import { useRouter } from "next/router";
 
-      </button>
-      <button
-      className="border bg-blue-800 py-4 px-6"
-      onClick={()=>{
-        setColor("blue");
-      }}
-      >
-        Tsenher
-      </button>
-      <button
-      className="border bg-green-800 py-4 px-6"
-      onClick={() =>{
-        setColor("green");
-      }}
-      >
-      Nogoon
-      </button>
+export default function Home() {
+  const router = useRouter();
+  return (
+    <div className="grid grid-cols-3 gap-6">
+      <button className="w-96 h-48 bg-red-500" onClick={() => {
+            router.push("cv");
+          }}>cv</button>
+      <button className="w-96 h-48 bg-red-500" onClick={() => {
+            router.push("task2");
+          }}>Weather</button>
+      <button className="w-96 h-48 bg-red-500" onClick={() => {
+            router.push("task3");
+          }}>News</button>  
+      <button className="w-96 h-48 bg-red-500" onClick={() => {
+            router.push("adgiintask");
+          }}>search</button>
+      <button className="w-96 h-48 bg-red-500" onClick={() => {
+            router.push("cv");
+          }}>05</button>
+      <button className="w-96 h-48 bg-red-500">06</button>
     </div>
   );
-};
-//<div>{data.map((item) => {
-//  return <div>{item.description}</div>
-//})}</div>
+}
