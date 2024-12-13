@@ -1,9 +1,13 @@
+import { useRouter } from "next/router";
 
 export default function WeatherDashboard() {
+    const router = useRouter();
     return (
           <div class="h-[100vh] w-[100%] bg-slate-700 flex justify-center items-center">
+            
               <div class="h-[85vh] w-[70%] bg-slate-800 rounded rounded-[2vh] flex ">
                   <div class="h-[100%] w-[10%] rounded rounded-[2vh] flex justify-center items-center">
+               
                       <div class="h-[97%] w-[85%] bg-slate-800 rounded rounded-[2vh]">
                           <div class="h-[13%] w-[100%] rounded rounded-[2vh] flex justify-center items-center">
                           <div class="h-[70%] w-[70%] bg-slate-900 rounded rounded-[2vh] flex justify-center items-center text-3xl text-[#8193a1]">
@@ -121,6 +125,7 @@ export default function WeatherDashboard() {
                                           class="h-[20%] w-[100%] flex justify-center item-center text-slate-100 text-bold text-xl">
                                           3:00 PM
                                       </div>
+                                      
                                       <div class="h-[30%] w-[100%]  flex justify-center item-center text-white text-6xl pl-3">
                                           <i class="fa-solid fa-cloud-bolt"></i>
                                       </div>
@@ -158,6 +163,16 @@ export default function WeatherDashboard() {
                           </div>
                       </div>
                   </div>
+                  <div>
+      <button
+        className="border rounded-lg bg-gray-400 p-4 font-bold mb-2 hover:bg-blue-200"
+        onClick={() => {
+          router.back();
+        }}
+      >
+        back
+      </button>
+    </div>
                   <div class="h-[30vh] w-[100%] rounded rounded-[2vh] flex flex-col justify-center items-center ">
                       <button
                           class="h-[3vh] w-[10vh] bg-blue-500 rounded rounded-xl absolute bottom-[32vh] right-[69vh] text-white text-lg">See

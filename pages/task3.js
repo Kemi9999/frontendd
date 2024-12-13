@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
   const [grid, setGrid] = useState(true);
   const data = [
     {
@@ -47,6 +49,16 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <div>
+      <button
+        className="border rounded-lg bg-gray-400 p-4 font-bold mb-2 hover:bg-blue-200"
+        onClick={() => {
+          router.back();
+        }}
+      >
+        back
+      </button>
+    </div>
       </div>
   );
 }

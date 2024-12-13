@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const userData = [
@@ -11,6 +12,7 @@ const userData = [
     { id:8, name: "Anar-erdene", email: "anaraa@gmail.com"},  
 ];
 export default function Users(){
+    const router = useRouter();
     const [users, setUsers] = useState(userData);
     const [search, setSearch] = useState("");
     const filteredUsers = users.filter((user)=>
@@ -48,6 +50,16 @@ return(
                 )}
 
             </div>
+            <div>
+      <button
+        className="border rounded-lg bg-gray-400 p-4 font-bold mb-2 hover:bg-blue-200"
+        onClick={() => {
+          router.back();
+        }}
+      >
+        back
+      </button>
+    </div>
     </div>
 );
 }

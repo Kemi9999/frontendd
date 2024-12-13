@@ -1,4 +1,7 @@
+import { useRouter } from "next/router";
+
 export default function Home() {
+  const router = useRouter();
     return (
       <div className="bg-gray-50 text-gray-900 font-sans antialiased">
 
@@ -80,6 +83,16 @@ export default function Home() {
               <p className="text-gray-600">Nest Education | Graduated: 2021</p>
               <p className="mt-2 text-gray-700">Relevant coursework: Data Structures, Algorithms, Web Development, Databases.</p>
             </div>
+            <div>
+      <button
+        className="border rounded-lg bg-gray-400 p-4 font-bold mb-2 hover:bg-blue-200"
+        onClick={() => {
+          router.back();
+        }}
+      >
+        back
+      </button>
+    </div>
           </section>
   
        
